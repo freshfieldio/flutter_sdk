@@ -15,7 +15,7 @@ Add to your `pubspec.yaml` file:
 dependencies:
   freshfield:
     git:
-      url: https://github.com/freshfieldio/flutter_sdk.git
+      url: https://github.com/freshfieldio/flutter_sdk
 ```
 
 
