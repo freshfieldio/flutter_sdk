@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    freshfield.init('ff.ha060qgzxe7e00v55x08mhywplk259p2');
+    freshfield.init('your-api-key');
     _loadUpdates();
   }
 
@@ -127,7 +127,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                             children: [
                                               Row(
                                                 children: [
-                                                  Text(feature.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                                                  Text(feature.name,
+                                                      style: const TextStyle(fontWeight: FontWeight.bold)),
                                                   const SizedBox(width: 8),
                                                   Container(
                                                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),

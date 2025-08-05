@@ -1,11 +1,9 @@
 # 🥕 Freshfield Flutter SDK
 
-Official Flutter SDK package for integrating Freshfield updates. This SDK allows you to fetch and display updates, features, and changes from your Freshfield dashboard directly in your Flutter app.
+Official Flutter SDK package for integrating Freshfield updates. This SDK allows you to fetch and display updates from your Freshfield dashboard directly in your Flutter app.
 
 > Since freshfield is in the early stages of development, we recommend you to take a look at an example implementation.
 > [example/lib/main.dart](example/lib/main.dart).
-
-
 
 ## Installation
 
@@ -18,8 +16,6 @@ dependencies:
       url: https://github.com/freshfieldio/flutter_sdk
 ```
 
-
-
 ## Basic Usage
 
 Initialize the Freshfield service and fetch updates in your Flutter application:
@@ -29,13 +25,11 @@ import 'package:freshfield/freshfield.dart';
 
 // Initialize the service
 final freshfield = FreshfieldService();
-freshfield.init('YOUR_API_KEY'); //You can find it in Freshfield app /widgets#basic-usage (e.g. ff.ha060qgzxe7e00v55x08mhywplk259p2)
+freshfield.init('YOUR_API_KEY');
 
 // Get updates
 final updates = await freshfield.getUpdates(limit: 5, offset: 0);
 ```
-
-
 
 ## API Reference
 
@@ -65,4 +59,4 @@ The `Feature` model contains:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+[MIT](./LICENSE)

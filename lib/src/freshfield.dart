@@ -1,17 +1,13 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'models/update.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
-import 'dart:io' show Platform;
 
 class FreshfieldService {
   final String baseUrl;
   String? _apiKey;
 
   FreshfieldService({
-    // this.baseUrl = 'http://10.0.2.2:8090/api/widget', // Android emulator
-    // this.baseUrl = 'http://localhost:8090/api/widget', // iOS simulator
-    this.baseUrl = 'http://192.168.0.76:8090/api/widget', // Physical device
+    this.baseUrl = 'https://pb.freshfield.io/api/widget',
   });
 
   void init(String apiKey) {
@@ -53,7 +49,6 @@ class FreshfieldService {
       Uri.parse('$baseUrl/updates?limit=$limit&offset=$offset'),
       headers: {
         'X-Widget-Key': _apiKey!,
-        if (!kIsWeb && (Platform.isAndroid || Platform.isIOS)) 'User-Agent': "Freshfield/Mobile",
         'Accept': 'application/json',
       },
     );
