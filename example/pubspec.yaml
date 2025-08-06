@@ -12,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   freshfield:
-    path: ../
+    git:
+      url: https://github.com/freshfieldio/flutter_sdk
   http: ^1.1.0
   flutter_svg: ^2.0.9
   flutter_html: ^3.0.0
