@@ -48,7 +48,7 @@ class FreshfieldService {
     final response = await http.get(
       Uri.parse('$baseUrl/updates?limit=$limit&offset=$offset'),
       headers: {
-        'X-Widget-Key': _apiKey!,
+        'X-Api-Key': _apiKey!,
         'Accept': 'application/json',
       },
     );
